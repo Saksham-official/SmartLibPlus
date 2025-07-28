@@ -1,10 +1,24 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-  text-align: center;
-  padding-top: 50px;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+h1, h2 {
+    margin-bottom: 20px;
 }
 
-h1 {
-  color: #2c3e50;
-}
+.forgot-password {
+    display: inline-block;
+    padding: 12px;
+    background-color: #5a67d8; /* Button color */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the link */
+  }
+  .forgot-password:hover {
+    background-color: #434190; /* Darker shade on hover */
+  }

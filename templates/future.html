@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Extensions | SmartLib</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+    
+    :root {
+      --primary: #00f0ff;
+      --secondary: #4f46e5;
+      --dark: #0f172a;
+      --light: #e2e8f0;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(79, 70, 229, 0.05) 0%, transparent 20%);
+    }
+    
+    .orb {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      position: absolute;
+      z-index: -1;
+      animation: drift 15s infinite alternate ease-in-out;
+    }
+    
+    .orb:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      animation-delay: -4s;
+      top: 40%;
+      left: 70%;
+    }
+    
+    @keyframes drift {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(20px, 30px); }
+      100% { transform: translate(-30px, -20px); }
+    }
+    
+    .future-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .future-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+    }
+    
+    .feature-badge {
+      background: linear-gradient(45deg, var(--secondary), var(--primary));
+      clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    }
+  </style>
+</head>
+<body>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-4xl">
+      <div class="text-center mb-12">
+        <div class="feature-badge w-40 h-16 mx-auto mb-4 flex items-center justify-center">
+          <span class="font-['Orbitron'] font-bold text-white tracking-wider uppercase text-sm">Roadmap</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 font-['Orbitron']">
+          SmartLib Evolution Path
+        </h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          Discover the cutting-edge features we're developing to revolutionize your library experience.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-emerald-400 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">User Authentication</h3>
+          </div>
+          <p class="text-gray-300">Secure registration, login system with multi-factor authentication options.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Role Management</h3>
+          </div>
+          <p class="text-gray-300">Granular admin/user roles with customizable permission sets.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Book Tracking</h3>
+          </div>
+          <p class="text-gray-300">Complete loan management with issue/return history and automated workflows.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Smart Reminders</h3>
+          </div>
+          <p class="text-gray-300">Automated due date notifications via email, SMS, and push notifications.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Community Reviews</h3>
+          </div>
+          <p class="text-gray-300">Reader ratings and detailed reviews with sentiment analysis.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Media Support</h3>
+          </div>
+          <p class="text-gray-300">Book cover uploads with automatic image optimization and tagging.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6 md:col-span-2 lg:col-span-1">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Analytics Dashboard</h3>
+          </div>
+          <p class="text-gray-300">Interactive data visualization for collections, loans, and user engagement.</p>
+        </div>
+        
+        <div class="future-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-sky-500 flex items-center justify-center mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h3 class="font-['Orbitron'] text-lg font-bold">Mobile Experience</h3>
+          </div>
+          <p class="text-gray-300">Responsive design with progressive web app capabilities.</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <a href="/home" class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-3 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+          Back to SmartLib Home
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Animate elements on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.future-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      cards.forEach((card, index) => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>
