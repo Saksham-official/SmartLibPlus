@@ -68,3 +68,27 @@ git clone https://github.com/your-username/SmartLib.git
 cd SmartLib
 pip install -r requirements.txt
 python app.py
+```
+---
+
+## 💬 Feedback & Support
+
+Your thoughts matter!  
+If you’ve used SmartLib or have ideas on how it could be better, I’d love to hear from you.
+
+- Found a bug? 🐛  
+- Want a new feature? 🌟  
+- Just want to say hi or ask how it was built? 😊
+
+📩 Feel free to open an [Issue](https://github.com/your-username/SmartLib/issues), or  
+📬 Reach out to me directly: (connect on [LinkedIn](www.linkedin.com/in/saksham-goel-y00528)!)
+
+Let’s make SmartLib even smarter — together. 💡📚
+
+---
+
+## 🤝 Contributions
+
+***If you're a developer and want to contribute — fork the repo, make changes, and submit a PR!  
+All ideas and feedback are welcome. Let's grow SmartLib together 💻✨***
+
